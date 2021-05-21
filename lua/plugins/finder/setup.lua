@@ -136,7 +136,7 @@ end
 -- selected into the currsor cursor position
 
 telescope.content_selector = function()
-  listing("DSA", "~/Documents/dsa", vim.api.nvim_get_current_buf(),  vim.api.nvim_win_get_cursor(0))
+  listing("DSA", "~/Desktop/DSA", vim.api.nvim_get_current_buf(),  vim.api.nvim_win_get_cursor(0))
 end
 
 -- utils.map("n", '<leader>go', '<cmd> lua dotfiles()<cr>', {noremap = true})

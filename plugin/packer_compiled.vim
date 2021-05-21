@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/home/tinku/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/tinku/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/tinku/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/tinku/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/tinku/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/upen/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/upen/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/upen/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/upen/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/upen/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -73,129 +73,133 @@ time("Defining packer_plugins", true)
 _G.packer_plugins = {
   ["FTerm.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
   },
   ["completion-nvim"] = {
     after = { "vim-vsnip", "vim-vsnip-integ" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/opt/completion-nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/opt/completion-nvim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
   ["diffview.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/diffview.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/diffview.nvim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["goyo.vim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/goyo.vim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/goyo.vim"
   },
   gruvbox = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
   ["lsp-trouble.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/lsp-trouble.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/lsp-trouble.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   neoformat = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/neoformat"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/neoformat"
   },
   ["nlua.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-treesitter-refactor"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/playground"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   undotree = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/undotree"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/undotree"
   },
   ["vim-colorschemes"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-colorschemes"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-colorschemes"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-man"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-man"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-man"
   },
   ["vim-ripgrep"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
   },
   ["vim-signify"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/vim-signify"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/vim-signify"
   },
   ["vim-vsnip"] = {
     load_after = {
@@ -203,20 +207,20 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
   },
   ["vim-vsnip-integ"] = {
-    after_files = { "/home/tinku/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ/after/plugin/vsnip_integ.vim" },
+    after_files = { "/Users/upen/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ/after/plugin/vsnip_integ.vim" },
     load_after = {
       ["completion-nvim"] = true
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/opt/vim-vsnip-integ"
   },
   ["which-key.nvim"] = {
     loaded = true,
-    path = "/home/tinku/.local/share/nvim/site/pack/packer/start/which-key.nvim"
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 

@@ -48,6 +48,7 @@ return require('packer').startup(function()
 
   use 'gruvbox-community/gruvbox'
   -- use 'morhetz/gruvbox'
+  use 'joshdick/onedark.vim'
 
   use 'jremmen/vim-ripgrep'
 

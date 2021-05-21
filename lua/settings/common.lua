@@ -35,3 +35,16 @@ vim.api.nvim_set_keymap('n', 'tno', ":Telescope loclist<CR>", {noremap = true})
 -- utils.map("n", '<leader>go', '<cmd> lua dotfiles()<cr>', {noremap = true})
 -- utils.map('n', '<leader>ps', ':lua require("telescope.builtin").grep_string({search = vim.fn.input("Grep for > ")})<cr>', {noremap = true})
 -- utils.map("n", '<leader>o', '<cmd> lua content_selector()<cr>', {noremap = true})
+
+-- competitive programming specific
+-- local filetype = vim.bo.filetype
+-- print(filetype)
+-- local cmd = ''
+
+-- if filetype=='cpp' then
+--   cmd = ':!clear ; mk.sh %:r &&  rn.sh %:r <CR>'
+-- elseif filetype=='python' then
+--   cmd = ':!clear ; python r <CR>'
+-- end
+
+-- vim.api.nvim_set_keymap('n', '<F8>', cmd, {noremap = true})

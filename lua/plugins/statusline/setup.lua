@@ -6,29 +6,32 @@ gl.short_line_list = {"NerdTree", "packager", "Floaterm", "coc-eplorer", "NvimTr
 
 -- color palette
 local colors = {
-  bg = "#3c3836",
+  bg = "#222520",
   fg = "#81A1C1",
-  line_bg = "#3c3836",
+  line_bg = "#222520",
   lbg = "#3c3836",
   fg_green = "#8FBCBB",
-  yellow = "#fabd2f",
-  cyan = "#A3BE8C",
+  light_yellow = "#e5c07b",
+  dark_yellow = "d19a66",
+  cyan = "#56b6c2",
   darkblue = "#81A1C1",
-  green = "#689d6a",
+  green = "#98c379",
   orange = "#fe8019",
   purple = "#d3869b",
-  magenta = "#BF616A",
-  gray = "#616E88",
-  blue = "#83a598",
-  red = "#cc241d",
-  white = "#d5a4c1",
-  black = "#282828"
+  magenta = "#c678dd",
+  gutter_gray = "#4b5263",
+  comment_gray = "5c6370",
+  blue = "#61afef",
+  light_red = "#cc241d",
+  dark_red = "be5046",
+  white = "#abb2bf",
+  black = "#282c34"
 }
 
 -- colors for different vim modes
 local mode_color = {
   n = colors.green,
-  i = colors.yellow,
+  i = colors.light_yellow,
   v = colors.white,
   [''] = colors.white,
   [''] = colors.white,
@@ -38,7 +41,7 @@ local mode_color = {
   s = colors.orange,
   S = colors.orange,
   -- [""] = colors.orange,
-  ic = colors.yellow,
+  ic = colors.light_yellow,
   R = colors.purple,
   Rv = colors.purple,
   cv = colors.orange,
@@ -79,26 +82,29 @@ section.left[1] = {
 section.left[2] = {
   ViMode = {
     provider = function()
-      -- local mode = fn.mode()
+      local mode = fn.mode()
       cmd("hi GalaxyViMode guifg=" .. mode_color[fn.mode()])
-      --   ҟαĺ          
-      return "     "
+      --   ҟαĺ  j        
+      -- return "     "
 
-      -- if (mode=='n') then
-      --   return '  NORMAL  '
-      -- elseif (mode=='i') then
-      --   return '  INSERT  '
-      -- elseif (mode=='v') then
-      --   return '  VISUAL  '
-      -- elseif (mode=='V') then
-      --   return '  VISUAL-LINE  '
-      -- else if (mode=='') then
-      --   return '  VISUAL-BLOCK  '
-      -- end
-    -- end
+      if (mode=='n') then
+        return '  NORMAL  '
+      elseif (mode=='i') then
+        return '  INSERT  '
+      elseif (mode=='v') then
+        return '  VISUAL  '
+      elseif (mode=='V') then
+        return '  VISUAL-LINE  '
+      elseif (mode=='') then
+        return '  VISUAL-BLOCK  '
+      elseif (mode=='c') then
+        return '  COMMAND  '
+      elseif (mode=='r') then
+        return '  REPLACE  '
+    end
 
     end,
-    highlight = {colors.red, colors.line_bg, "bold"}
+    highlight = {colors.light_red, colors.line_bg, "bold"}
   }
 }
 -- section.left[3] = {
@@ -117,7 +123,7 @@ section.left[4] = {
     condition = buffer_not_empty,
     separator = " ",
     separator_highlight = {colors.purple, colors.bg},
-    highlight = {colors.yellow, colors.line_bg, "bold"}
+    highlight = {colors.light_yellow, colors.line_bg, "bold"}
   }
 }
 
@@ -184,7 +190,7 @@ section.right[8] = {
     provider = "DiffModified",
     condition = checkwidth,
     icon = "柳",
-    highlight = {colors.yellow, colors.line_bg}
+    highlight = {colors.light_yellow, colors.line_bg}
   }
 }
 
@@ -253,7 +259,7 @@ section.right[12] = {
     provider = "DiagnosticWarn",
     separator = " ",
     icon = " ",
-    highlight = {colors.yellow, colors.line_bg},
+    highlight = {colors.light_yellow, colors.line_bg},
     separator_highlight = {colors.bg, colors.bg}
   }
 }

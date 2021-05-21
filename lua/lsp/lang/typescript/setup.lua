@@ -4,7 +4,7 @@
 DATA_PATH = vim.fn.stdpath('data')
 
 require'lspconfig'.tsserver.setup {
-    -- cmd = {DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server", "--stdio"},
+    cmd = {DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server", "--stdio"},
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
     -- on_attach=completion.on_attach,
     on_attach=require('lsp/common').on_attach,
