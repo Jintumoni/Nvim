@@ -76,7 +76,7 @@ _G.packer_plugins = {
     path = "/Users/upen/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
   },
   ["completion-nvim"] = {
-    after = { "vim-vsnip", "vim-vsnip-integ" },
+    after = { "vim-vsnip-integ", "vim-vsnip" },
     loaded = false,
     needs_bufread = false,
     path = "/Users/upen/.local/share/nvim/site/pack/packer/opt/completion-nvim"
@@ -144,6 +144,10 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/upen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["onedark.vim"] = {
+    loaded = true,
+    path = "/Users/upen/.local/share/nvim/site/pack/packer/start/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
