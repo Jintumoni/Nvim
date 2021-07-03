@@ -1,3 +1,5 @@
+vim.cmd [[ packadd which-key.nvim ]]
+
 require("which-key").setup {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -75,7 +77,41 @@ wk.register({
         s = {'<cmd>Telescope git_status<CR>', 'status'},
       }
     },
-    q = {'<cmd>lua vim.lsp.set_loclist()<cr>', 'locallist diagnostic'}
+    q = {'<cmd>lua vim.lsp.set_loclist()<cr>', 'locallist diagnostic'},
+    n = {':Neoformat<cr>', 'format buffer'},
+    ['w'] = {
+      name = '+workspace',
+      a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace folder'},
+      d = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'delete workspace folder'},
+      l = {'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'list workspace folder'},
+    },
+    t = {
+      name = '+treesitter | +typedef',
+      d = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', 'typedef'}
+    },
+    r = {
+      name = '+rename',
+      n = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'}
+    },
+    c = {
+      name = '+codeaction',
+      a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'codeaction'}
+    },
+    e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', 'show line diagnostics'},
+    ['x'] = {
+      name = '+lsptrouble',
+      x = {'<cmd>LspTroubleToggle<cr>', 'toggle trouble'},
+      l = {'<cmd>LspTroubleToggle loclist<cr>', 'toggle location list'},
+      q = {'<cmd>LspTroubleToggle quickfix<cr>', 'toggle quickfix list'},
+      w = {'<cmd>LspTroubleToggle lsp_workspace_diagnostics<cr>', 'toggle ws diagnostics'},
+      d = {'<cmd>LspTroubleToggle lsp_document_diagnostics<cr>', 'toggle doc diagnostics'},
+    },
+    ['s'] = {
+      name = '+session',
+      s = {':<C-u>SessionSave<CR>', 'save'},
+      l = {':<C-u>SessionLoad<CR>', 'load'},
+    },
+    z = {':ZenMode<cr>', 'toggle zenmode'}
   },
   ['w'] = {
     name = '+split-movements',
@@ -89,18 +125,16 @@ wk.register({
     p = {":TSPlaygroundToggle<cr>", 'toggle playground'},
     t = {":TSHighlightCapturesUnderCursor<cr>", 'type of'},
   },
-  -- d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'definition'},
-  -- D = {'<Cmd>lua vim.lsp.buf.declaration()<CR>', 'declaration'},
-  -- r = {'<cmd>lua vim.lsp.buf.references()<CR>', 'references'},
-  -- K = {'<Cmd>lua vim.lsp.buf.hover()<CR>', 'hover'},
-  -- i = {'<cmd>lua vim.lsp.buf.implementation()<CR>', 'implementation'},
+  ['g'] = {
+    name = '+goto',
+    d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'definition'},
+    D = {'<Cmd>lua vim.lsp.buf.declaration()<CR>', 'declaration'},
+    r = {'<cmd>lua vim.lsp.buf.references()<CR>', 'references'},
+    I = {'<cmd>lua vim.lsp.buf.implementation()<CR>', 'implementation'},
+  },
+  ['K'] = {'<Cmd>lua vim.lsp.buf.hover()<CR>', 'hover'},
   -- s = {'<cmd>lua vim.lsp.buf.signature_help()<CR>', 'signature'},
-  -- wa = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace folder'},
-  -- wd = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'delete workspace folder'},
-  -- wl = {'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'list workspace folder'},
-  -- td = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', 'type definition'},
-  -- rn = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
-  -- ld = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', 'show line diagnostics'},
+  -- buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   -- p = {'<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'prev diagnostic'},
   -- n = {'<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'next diagnostic'},
   -- ll = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', 'set local list'}

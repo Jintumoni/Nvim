@@ -11,7 +11,7 @@ require('telescope').setup{
       '--column',
       '--smart-case'
     },
-    prompt_position = "bottom",
+    -- prompt_position = "bottom",
     prompt_prefix = "> ",
     selection_caret = "> ",
     entry_prefix = "  ",
@@ -19,7 +19,7 @@ require('telescope').setup{
     selection_strategy = "reset",
     sorting_strategy = "descending",
     layout_strategy = "horizontal",
-    layout_defaults = {
+    layout_config = {
       horizontal = {
         mirror = false,
       },
@@ -29,14 +29,14 @@ require('telescope').setup{
     },
     -- file_sorter =  require'telescope.sorters'.get_fuzzy_file,
     file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-    file_ignore_patterns = {'.node_modules', '.git'},
+    file_ignore_patterns = {'node_modules', '.git', 'undodir'},
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
     shorten_path = true,
-    winblend = 0,
-    width = 0.75,
-    preview_cutoff = 120,
-    results_height = 1,
-    results_width = 0.8,
+    winblend = 1,
+    -- width = 0.75,
+    -- preview_cutoff = 120,
+    -- results_height = 1,
+    -- results_width = 0.8,
     border = {},
     borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
     color_devicons = true,
@@ -55,12 +55,12 @@ require('telescope').setup{
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   },
   extensions = {
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
-    },
+    -- media_files = {
+    --   -- filetypes whitelist
+    --   -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+    --   filetypes = {"png", "webp", "jpg", "jpeg"},
+    --   find_cmd = "rg" -- find command (defaults to `fd`)
+    -- },
     fzy_native = {
       override_generic_sorter = false,
       override_file_sorter = true,
@@ -69,7 +69,7 @@ require('telescope').setup{
 }
 
 require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('media_files')
+-- require('telescope').load_extension('media_files')
 
 utils.map("n", '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true, silent = true })
 utils.map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true })
